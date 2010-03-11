@@ -178,7 +178,7 @@ abstract class Kohana_Controller_Layout extends Controller {
 	public function add_controller_path($path)
 	{
 		// If path is already 'absolute' then trim slashes and return it
-		if ($path[0] == '/')
+		if (isset($path[0]) AND $path[0] == '/')
 		{
 			return trim($path, '/');
 		}
